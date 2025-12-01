@@ -1,0 +1,8 @@
+#!/bin/bash
+# check the file
+if [ -z "$1" ]; then
+    echo "Error: No file specified."
+    exit 1
+fi
+# apt install it
+pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY apt install -y "$1"
